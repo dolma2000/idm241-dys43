@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: futura-light;
+    margin: 0;
+}
+
+.header{
+    padding-top: 3em;
+    padding-bottom: 1em;
+    font-size: 3em;
+    background-color: rgb(32, 30, 43);
+    color: #D3FFDF;
+    text-align: center;
+}
+.header h1 {
+    font-family: futura-heavy;
+}
+.header h2{
+    font-family: futura-medium;
+}
+.header h1,h2{
+    margin: 0;
+    letter-spacing: 2px;
+}
+hr{ 
+    text-align: center;
+    margin: 2em auto;
+    width: 20%;
+    height: 20px;
+    background-color: rgb(168, 252, 190);
+    border: none;
+}
+
+.alpha {
+    margin: 3em 144px 0;
+}
+.alpha h1 {
+    margin: 0 auto;
+    text-align: center;
+    color: #EFA834;
+    font-family: futura-medium;
+}
+.alpha p{
+    width: 50%;
+    margin: 2em auto;
+}
+.alpha a{
+    padding: 6px;
+    background-color:  rgb(216, 255, 227);
+    color:black;
+    text-decoration: none;
+    vertical-align: middle;
+    border-radius: 3px;
+    line-height: 50px;
+}
+.current {
+    text-align: center;
+}
+.current img {
+    width: 30%;
+}
+.current figcaption{
+    font-family: futura-lightoblique;
+    color: grey;
+}
+.next {
+    text-align: center;
+}
+.next img{
+    width: 30%;
+} 
+.next figcaption{
+    font-family: futura-lightoblique;
+    color: grey;
+}
+.identify{
+    margin-top: 3em;
+    text-align: center;
+    line-height: 1.5em;
+    padding-bottom: 7em;
+}
+.identify h3{
+    color: #EFA834;
+    margin-top: 2em;
+}
+.identify p{
+    margin: 0 auto;
+}
+
+
+
+
+/* Objective of Project: <br>
+            To identiify micro interaction and design an improved and meaningful digital experience based on a holistic consideration of users experience.
+            In this course, I will identify and improve three micro interactions in three different stages: Alpha(Simple), Beta(Slightly difficult), and Final(Complex). <br> */

@@ -1,0 +1,30 @@
+@font-face {
+    font-family: futura-book;
+    src: url(font/FuturaStd-Book.otf) format('woff2');
+    font-weight: book;
+    font-style: book;
+}
+@font-face {
+    font-family: futura-medium;
+    src: url(font/FuturaStd-Medium.otf) format('woff2');
+    font-weight: medium;
+    font-style: medium;
+}
+@font-face {
+    font-family: futura-light;
+    src: url(font/FuturaStd-Light.otf) format('woff2');
+    font-weight: light;
+    font-style: light;
+}
+@font-face {
+    font-family: futura-lightoblique;
+    src: url(font/FuturaStd-LightOblique.otf) format('woff2');
+    font-weight: light;
+    font-style: light;
+}
+@font-face {
+    font-family: futura-heavy;
+    src: url(font/FuturaStd-Heavy.otf) format('woff2');
+    font-weight: heavy;
+    font-style: heavy;
+}
