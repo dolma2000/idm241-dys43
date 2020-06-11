@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micro Interaction Case Study</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="blob.css">
+</head>
+<body>
+    <div class="header">
+        <h1> IDM 241</h1>
+        <h2>Micro-Interaction</h2>
+    </div>
+    <hr>
+
+    <h1 id="herotitle"><b>Hero Image</b></h1>
+    <div class="hero">
+        <div>
+            <img src="images/alpha.png" alt="">
+            <p>Alpha</p>
+        </div>
+        <div>
+            <img src="images/beta.png" alt="">
+            <p>Beta + Final</p>
+        </div>
+    </div>
+
+    <div class="main-textbox">
+        <p class="title">Overview</p>
+        <p>IDM 241 is a “Micro Interaction” course where I learnt to identify and implement the elements required to design an incredible digital experience. I have explored many modern design theories and scripting languages to complete this project of creating 3 micro interactions, 2 of which I have merged to become my final complex micro interaction. </p>
+        
+        <h2 id="subtitle">Background</h2>
+        <p>In this class, we are asked to develop <b>3 micro interactions: alpha, beta, and final</b> by ourselves. Each stage increases in complexity depending on the number of rules required in the micro interaction. These should be referenced from existing micro interaction and <b>improved into a more enjoyable experience.</b> </p>
+        <p>The purpose of this project, which is also my motivation, is essentially to explore modern design theories and languages that allows user to enjoy meaningful micro interactions.</p>
+        <p>The timeline for developing these micro interaction are varied: alpha (2 weeks), beta (3 weeks), and final (2 weeks). The alpha I made is its own micro interaction. For my beta and final, I have merged them together as one complex set of micro interaction. </p>
+        <p>This project is successful not only if my code worked, but also if my designed improved micro interaction left an impression to my users or not.</p>
+        
+        <h2 id="subtitle">Target Audience</h2>
+        <p>The interactions I have made are all to be included in my portfolio website eventually. Because of this, my target audience are professionals/potential employers who want to judge me for my skill and talent.
+            Thinking with this mindset, I was motivated to create a very fun and animated interaction to portray my skills. 
+            </p>
+    </div>
+
+    <div class="alpha">
+        <div class="alpha-header">
+            <p>ALPHA</p>
+        </div>
+        <div class="main-textbox alpha-text">
+            <p class="title">HAMBURGER MENU BAR</p>
+            <h2 id="subtitle">Context</h2>
+            <p>The micro interaction I want to improve is based off the hamburger menu bar from my current website: <a href="http://www.dolmayangchensherpa.com/" target="blank">My Portfolio Website</a></p>
+            <p><b>Problem:</b>   Currently, when clicking on the hamburger, a menu bar just slides in covering over half of the page. The hamburger button also does not give a direct feedback. To conclude, this interaction is very simple, predictable, and not exciting at all.</p>
+            
+            <div class="gif">
+                <img src="videos/current-hamburger-icon.gif" alt="Current icon">
+                <figcaption>Current Hamburger Menu Bar I want to improve.</figcaption>
+            </div>
+
+            <p><b>Proposed Improvement:</b> I decided to add two rules. First is the hamburger icon, as it is a button, naturally people would want a kind of immediate direct feedback upon tapping it. So, I want to have the hamburger icon to have its own animation where it would transition to an “X” upon clicking it.
+                Second is the menu bar, initially I wanted the bar to slide in like it does originally but only have the text come in one by one. But this changed later on as I began to explore more designs online. 
+                </p>
+            <div class="gif2">
+                <div>
+                    <img src="videos/hamburger-icon.gif" alt="">
+                    <figcaption>Hamburger Animation Reference</figcaption>
+                </div>
+                <div>
+                    <img src="videos/menu-bar.gif" alt="">
+                    <figcaption>Slide in Menu Bar Reference</figcaption>
+                </div>
+            </div>
+
+            <p>I believe these changes will add a sense of joy and life.</p>
+        
+
+            <h2 id="subtitle">Process</h2>
+
+            <p><b>CODE / DEVELOPMENT</b></p>
+
+            <p>I started with coding the hamburger and then the menu bar.
+                The improved hamburger icon animation was pulled from jonsuh.com which has a set of different hamburger icon animations. The one I chose was called “Spin” that transitions from a hamburger icon to an “X” by spinning. I implemented this animation’s CSS and JavaScript code as directed from the jonsuh.com website.
+            </p>
+            <p>Now that was done, I began to work on the menu bar sliding in. However, before starting this, I came across an Adobe XD micro interaction animation that inspired me to change my initial proposed idea.</p>
+            <div class="gif">
+                <img src="images/inspired.png" alt="">
+                <figcaption>Inspired by this Adobe XD Micro Interaction.</figcaption>
+            </div>
+            <p>
+                I really loved how the bars come in one by one and they each have different colors too. It’s smooth animation makes it very attractive and elegant, a style I love. I already have the words coming in one by one, but this inspired me to up my design. I have decided, I will make each word have its own colored bar and the bar will come in one by one instead!
+            </p>
+            <p>To build this animation, I first made sure each word is in its own div and has its own “id”. That way I could stylize them to become a bar by adding “padding” and refer to their “id” to give them a specific “background color”.</p>
+            <p>All of these together are enclosed within a “ul” tag which allows them to appear as a list. The “ul” tag and each div that is enclosed by a “li” tag is overall surrounded by a “nav” tag with a class = “nav-links”.
+                The “id” for each bar is set to transform:translateX(-100%) so it is all located out of the screen on the left side. To have the bar slide in with full view, I made a separate class “.nav-active” which is not present in the html page. I used Javascript to make the classList of the nav bar toggle between “.nav-links” and “.nav-active”. The “.nav-active” have “id” of the bars coded with different CSS style. The CSS code for the .nav-active #first #second #third all have their transform property changed to translateX(0%) so that it can slide into the screen. So if we click on the hamburger icon, the 3 bars will appear at once . What I wanted was for them to come in one by one. To achieve this, I set the 2nd bar to have a transition delay of 0.2s and the 3rd with 0.4s.
+                </p>
+            <div class="gif">
+                <img src="images/menubar.png" alt="">
+                <figcaption>HTML for the three bars.</figcaption>
+            </div>
+
+
+            <div class="challenge-solution">
+                <div class="challenge">
+                    <h3><b>CHALLENGE</b></h3>
+                    <p>The challenge for my alpha was sliding the nav bar out of view. What happened was that the whole bar slide out together at once; I wanted them to leave one by one as well. So I just copied the transition delay from the .nav-active bar styling and pasted it into the .nav-links bar styling. However it turned out like this:</p>
+                    <img src="images/menuerror.png" alt="">
+                </div>
+                <div class="solution">
+                    <h3><b>SOLUTION</b></h3>
+                    <p>I did not like it and it took me a while to figure out, but I realized that the order of the bar leaving is different from them coming in. So, to fix this, for the .nav-links #first #second #third, I set the 1st bar to have a transition delay of 0.4s and the 2nd bar with 0.4s. This time, it is the 3rd bar that has no transition delay.</p>
+                    <img src="images/fixedcode.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final">
+        <div class="final-header">
+            <p>BETA + FINAL</p>
+        </div>
+        <div class="main-textbox alpha-text final-a">
+            <p class="title">BLOB</p>
+            <h2 id="subtitle2">Context</h2>
+            <p>The Micro-Interaction I want to improve is a blob from the UI Kit website: <a href="http://www.uimotionkit.io/" target="blank"><b>UI Motion Kit</b></a></p>
+            <p><b>Problem:</b> Just a normal animation with no interaction.</p>
+            <div class="fig">
+                <img src="videos/beta.gif" alt="">
+                <figcaption>Inspired by this Adobe XD Micro Interaction.</figcaption>
+            </div>
+        
+            <p><b>Proposed Improvement:</b> It looks really beautiful but I believe it has potential for improving the experience by making it interactive. First once you hover on top of it, I want to make it so that the blob and text increase in size and the color of the blob will change too.</p>
+            <p>Second, I want add a click trigger where the blob will fill up the whole screen into a new page where the content inside will appear.</p>
+        
+            <div class="fig2">
+                <div>
+                    <img src="videos/improved_beta.gif" alt="">
+                    <figcaption>Hover interaction</figcaption>
+                </div>
+                <div>
+                    <img src="videos/filldemo.gif" alt="">
+                    <figcaption>Tap Interaction</figcaption>
+                </div>
+            </div>
+
+            <h2 id="subtitle2">Process</h2>
+            <p><b>HOVER INTERACTION</b></p>
+            <p>The animation of the blob was pulled from code pen. I copied and pasted the code to my own codepen board in my dashboard and started editing there.</p>
+            <p>First, I wanted the blob to have a bouncy animation on hover. So visually the size of the blob would increase a bit, then decrease a bit and then increase once more again. To do this, I used the animation CSS property and the keyframe rule. I called my animation name “bounce” and changed the size using transform:scale property. </p>
+            <div class="fig">
+                <img src="images/bounce.png" alt="">
+                <figcaption>My bounce animation keyframe code</figcaption>
+            </div>
+            <p>To change the background color, I simply set the background color to be the vibrant blue for when the blob is on hover. The same goes for changing the color of the text from black to white.</p>
+
+            <div class="challenge-solution" id="for-final">
+                <div class="challenge">
+                    <h3><b>Challenge</b></h3>
+                    <p>My main challenge was that when I added the word “Photos”, it wouldn’t move along with the blob, appearing static and awkward. Even though I did apply the same “movement” animation to this word, it still stayed still. Later I realized that this was because “movement” animation have a translateY transform property of only 8%. For the blob, the change in the Y axis can be seen, however, the word photo is only 50px in height and therefore, though the animation “movement” is being applied to it, its movement is easily missed. </p>
+                </div>
+                <div class="solution">
+                    <h3><b>Solution</b></h3>
+                <p>After realizing the main cause of this issue, I made a new animation for the word “Photos” to move. I basically copied the “movement” animation but renamed it as “movements” and changed the translate transform property from 8% to 90%. This makes the Y axis movement of the word more visible and in sync with the blob moving.</p>
+                </div>
+            </div>
+
+            <br>
+            <p><b>CLICK INTERACTION</b></p>
+            <p>For the first interaction, I first developed the new page animation where the word “Photos” and the three images will fade in upwards smoothly. The animation code for the word to transition in was pulled from <a href="https://tobiasahlin.com/moving-letters/">Moving Letters Resources</a> which is a resource of “moving letters” css animation made by as Swedish design Tobiah Ahlin. As the word was smoothly transitioning in, I also applied the same javascript code for the word animation onto the images, except the images all come at once.</p>
+
+            <div class="challenge-solution" id="for-final">
+                <div class="challenge">
+                    <h3><b>Challenge</b></h3>
+                    <p>The challenge when working with the click interaction was for making the blob fill up the page on click. My main issue was that the CSS styling for the blob that I copied from code pen was developed from the on .blob::before class and it is very difficult to work with a pseudo class.</p>
+                    <p>What I initially did was made another pseudo class called blob:after as I was hoping I could use Javascript to toggle the classlist from .blob::before to .blob:after but that it’s technically not possible to access a pseudo class from JavaScript because it is not part of the DOM tree</p>
+                </div>
+                <div class="solution">
+                    <h3><b>Solution</b></h3>
+                    <p>What I did instead was created a new class called blob-full-screen and used JavaScript to change the class of the blob from blob::before to blob-full-screen onclick.  Blob-full-screen class had the exact same code as blob::before, the difference is that blob-full-screen has a transform:scale property so that it increases in size till it fills up the whole page. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-textbox">
+        <p class="title">Results</p>
+        <p id="center"><b>Have a look at the final results by clicking on one of the blobs!</b></p>
+    </div>
+
+    <div class="result-link">
+        <a href="http://dolmayangchensherpa.com/idm241/alpha/build.html"><div class="blob" id="diff-grad">
+            <div></div>
+            <p>Menu Bar</p>
+        </div>
+        </a>
+        
+
+        <a href="http://dolmayangchensherpa.com/idm241/final/build.html"><div class="blob" id="moreright">
+            <div></div>
+            <p>Blob</p>
+        </div></a>
+    </div>
+
+    <div class="main-textbox">
+        <p>The project was a big success. I am happy with how the two micro interactions have turned out in the end and can’t wait to have them implemented into my portfolio site. I have learnt so much more on how to animate using CSS and Javascript within the past 9 weeks. Through guidance and self-learning, I have learnt how to effectively and structurally solve bugs with CSS and thus have made me believe in my skills and capability to solve coding problems by myself more. </p>
+        <p>Looking back at my project, there are still several rooms for improvement. For example, in my Blob “Hover Interaction” paragraph, I have two animations name that are almost the same, “movement” and “movements”. Next time, I would make sure to use different names for animations so that when I come back to this code, I wouldn’t get confused, and also to prevent confusion from other people viewing my code. I would also try too make my onclick blob interaction to bounce a little bit back before filling up the screen – similar to the bounce animation of my blob on hover. Overall, I am still very happy to learn more and make improvements whenever I can.</p>
+    </div>
+
+
+</body>
+</html>
